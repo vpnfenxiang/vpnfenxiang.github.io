@@ -62,7 +62,7 @@
         <nav class="navbar navbar-expand-lg stroke px-0">
                         <a class="navbar-brand" href="/">
                 <span>
-                    VPN分享                </span>
+                    VPN分享节点资源                </span>
             </a>
                         <!-- if logo is image enable this
     <a class="navbar-brand" href="#index.html">
@@ -76,6 +76,9 @@
                 <ul class="navbar-nav ml-lg-auto">
                                         <li class="nav-item">
                         <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
                     </li>
                                         <li class="nav-item">
                         <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
@@ -127,7 +130,7 @@
         <div class="container py-2">
             <div class="row">
                 <div class="col-md-9">
-                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node免费节点站" data-url="https://clashnode.github.io">
                 <div class="xcblog-blog-detail xcblog-blog-detail-defined">
                       <p>在数字化浪潮席卷全球的今天，网络已成为我们生活中不可或缺的一部分。然而随之而来的隐私泄露、网络监控和地域限制等问题也日益凸显。据统计，2023年全球网络攻击次数同比增长了38%，个人数据泄露事件较上年增加了67%。在这样的背景下，掌握网络隐私保护技术不再只是技术爱好者的专长，而应成为每个互联网用户的必备技能。</p>  <p>V2Ray作为新一代代理工具中的佼佼者，以其卓越的隐蔽性和灵活性正在改变着网络隐私保护的格局。与传统的VPN技术不同，V2Ray采用模块化设计和多协议支持，能够根据不同的网络环境智能调整传输策略，有效规避网络审查和限制。特别是在iOS生态系统中，V2Ray的表现更是令人惊艳——它不仅能完美融入苹果设备的隐私保护体系，还能为用户提供企业级的安全通信体验。</p>  <h2>深入解析V2Ray的技术优势</h2>  <p>V2Ray（Project V）是一个专注于构建基础通信框架的开源项目。其核心设计理念是通过多协议支持和模块化架构，为用户提供高度定制化的网络代理解决方案。与传统的Shadowsocks相比，V2Ray在协议伪装、流量整形和抗检测能力方面都有显著提升。</p>  <p>V2Ray支持的主流协议包括： - VMess协议：专为V2Ray设计的加密通信协议，支持动态端口和用户ID验证 - VLESS协议：轻量级无状态协议，性能更优，资源占用更少 - Shadowsocks协议：兼容广泛使用的SS协议 - Socks/HTTP协议：支持标准代理协议</p>  <p>特别值得关注的是V2Ray的传输层伪装能力。通过WebSocket+TLS组合，V2Ray可以将代理流量伪装成正常的HTTPS流量，使得网络服务提供商难以识别和阻断。这种技术在国际贸易、远程办公和学术研究等场景中具有重要价值。</p>  <h2>iOS平台上的V2Ray客户端选择</h2>  <p>在苹果严格的App Store审核政策下，直接提供V2Ray客户端的应用并不多见。目前主流的解决方案有以下几种：</p>  <p><strong>官方推荐方案</strong>： 1. Shadowrocket（小火箭） - 售价$2.99    这款被誉为iOS平台最强大的代理工具，支持V2Ray全协议栈</p>  <ol> <li><p>Quantumult X - 售价$7.99 提供更精细的路由规则控制和节点筛选功能</p></li> <li><p>Stash - 订阅制应用 界面现代化，支持规则自动更新</p></li> </ol>  <p><strong>替代方案</strong>： 对于不愿意付费的用户，可以考虑通过TestFlight安装测试版应用，或者使用境外Apple ID下载相关应用。需要注意的是，免费方案往往存在稳定性差、更新不及时等问题。</p>  <h2>详细安装配置指南</h2>  <h3>第一步：获取客户端应用</h3>  <p>推荐通过美区Apple Store购买Shadowrocket： 1. 注册或购买美区Apple ID 2. 充值相应金额（可通过购买礼品卡方式） 3. 搜索"Shadowrocket"完成购买</p>  <h3>第二步：服务器配置详解</h3>  <p>打开Shadowrocket后，点击右上角"+"号添加服务器：</p>  <p><code>json {   "protocol": "vmess",   "address": "your_server_address.com",   "port": 443,   "userId": "you-uuid-here",   "alterId": 0,   "security": "auto",   "network": "ws",   "wsPath": "/your-path",   "tls": "tls" }</code></p>  <p>每个参数的详细说明： - address：服务器域名或IP地址 - port：通常使用443端口（HTTPS标准端口） - userId：36位的UUID标识符 - alterId：早期用于防检测的标识，现在建议设置为0 - security：加密方式，推荐选择"auto"或"aes-128-gcm" - network：传输协议，推荐使用"ws"（WebSocket） - wsPath：WebSocket路径，需要与服务器端保持一致 - tls：必须启用以增强安全性</p>  <h3>第三步：路由规则配置</h3>  <p>Shadowrocket的路由系统是其核心功能之一：</p>  <p><strong>全局模式</strong>：所有流量都通过代理 <strong>规则模式</strong>：智能分流（推荐） - 直连国内网站，节省流量 - 代理国外被墙网站 - 屏蔽广告和恶意网站</p>  <p>建议配置规则： <code>DOMAIN-SUFFIX,cn,DIRECT DOMAIN-KEYWORD,google,PROXY DOMAIN-SUFFIX,github.com,PROXY FINAL,PROXY</code></p>  <h3>第四步：高级功能配置</h3>  <ol> <li><strong>订阅功能</strong>：支持通过订阅链接自动更新节点</li> <li><strong>健康检查</strong>：自动测试节点延迟和可用性</li> <li><strong>流量统计</strong>：监控各应用流量使用情况</li> <li><strong>延迟测试</strong>：定期测试节点响应速度</li> </ol>  <h2>实战场景应用案例</h2>  <p><strong>案例一：海外学术研究</strong> 张教授需要访问Google Scholar和IEEE数据库，通过配置V2Ray的学术资源专用规则，实现了： - 自动代理学术数据库流量 - 保持微信等国内应用直连 - 月均节省国际流量费用约200元</p>  <p><strong>案例二：跨境电商运营</strong> 李女士经营跨境电商，需要同时管理多个地区的店铺账号： - 为每个店铺配置独立IP线路 - 使用V2Ray的分应用代理功能 - 实现多账号安全隔离管理</p>  <h2>疑难问题解决方案</h2>  <p><strong>连接不稳定问题</strong>： 1. 尝试切换传输协议（TCP/WebSocket/HTTP2） 2. 检查TLS证书配置 3. 调整加密方式为aes-128-gcm</p>  <p><strong>速度优化技巧</strong>： 1. 启用Mux多路复用功能 2. 调整concurrency参数（建议10-20） 3. 选择物理距离近的服务器节点</p>  <p><strong>隐私增强设置</strong>： 1. 开启"防止DNS泄漏"选项 2. 配置自定义DNS服务器（推荐1.1.1.1） 3. 启用"绕过局域网"功能</p>  <h2>安全使用建议</h2>  <ol> <li><strong>定期更新</strong>：保持客户端和服务器端版本最新</li> <li><strong>节点轮换</strong>：建议每3-6个月更换一次服务器节点</li> <li><strong>备份配置</strong>：导出配置文件并加密存储</li> <li><strong>双重验证</strong>：重要服务启用二次验证</li> <li><strong>流量伪装</strong>：在高审查网络环境中使用FullCone NAT技术</li> </ol>  <h2>未来发展趋势</h2>  <p>随着网络环境的不断变化，V2Ray也在持续演进。值得关注的发展方向包括： - 与WireGuard协议的深度整合 - 机器学习驱动的智能路由选择 - 区块链技术去中心化节点网络 - 量子加密技术的预先部署</p>  <h2>总结点评</h2>  <p>V2Ray在iOS平台上的表现堪称移动代理技术的典范之作。它巧妙地在苹果严格的隐私政策与用户自由访问需求之间找到了平衡点，提供了企业级的安全保障和极致的用户体验。</p>  <p>从技术层面看，V2Ray的架构设计展现了令人赞叹的工程智慧——模块化的设计使得协议升级和功能扩展变得优雅而简单；多协议支持能力让它能够适应各种复杂的网络环境；精细化的流量控制功能更是体现了"智能代理"的核心理念。</p>  <p>从实用价值角度，这篇指南详细记录的不仅是技术操作的步骤，更是一份数字时代的生存手册。在全球化与数字主权并存的时代背景下，掌握V2Ray这样的工具，意味着获得了突破信息壁垒的能力，拥有了保护数字隐私的盾牌，更是开启了通往无边界数字世界的大门。</p>  <p>值得注意的是，技术本身是中立的，如何使用取决于使用者。我们鼓励将V2Ray用于正当的隐私保护、学术研究和跨国商务活动，坚决反对任何形式的违法滥用。在这个信息即力量的时代，明智而负责任地使用技术工具，是我们每个数字公民应尽的义务。</p>  <p>最后要强调的是，网络安全是一个持续的过程而非一劳永逸的状态。保持学习、及时更新、谨慎操作，才能在这个充满挑战与机遇的数字时代中安全航行。希望本指南能成为您网络安全之旅的可靠伙伴，助您在数字海洋中乘风破浪，自由探索。</p>                 </div>
                 <div class="clearfix"></div>
@@ -142,13 +145,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-150616.htm" title="安卓手机vmess使用全攻略：从入门到精通的隐私保护指南">安卓手机vmess使用全攻略：从入门到精通的隐私保护指南</a></li>
-                        <li class="py-2"><a href="/news/article-151699.htm" title="iOS设备上V2Ray的终极指南：从原理到实践的深度解析">iOS设备上V2Ray的终极指南：从原理到实践的深度解析</a></li>
-                        <li class="py-2"><a href="/news/article-150264.htm" title="突破数字边界：手机科学上网全攻略与安全指南">突破数字边界：手机科学上网全攻略与安全指南</a></li>
-                        <li class="py-2"><a href="/news/article-151338.htm" title="魅族手机上的V2Ray全面指南：解锁安全网络新体验">魅族手机上的V2Ray全面指南：解锁安全网络新体验</a></li>
-                        <li class="py-2"><a href="/news/article-149905.htm" title="水下角斗场：揭秘鱼类冲突背后的生存博弈与生态智慧">水下角斗场：揭秘鱼类冲突背后的生存博弈与生态智慧</a></li>
-                        <li class="py-2"><a href="/news/article-150975.htm" title="突破限制：小米手机安装v2rayNG全攻略与深度解析">突破限制：小米手机安装v2rayNG全攻略与深度解析</a></li>
+                        <li class="py-2"><a href="/news/article-152790.htm" title="高恪固件完美融合v2ray：打造极速安全网络的终极指南">高恪固件完美融合v2ray：打造极速安全网络的终极指南</a></li>
+                        <li class="py-2"><a href="/news/article-154248.htm" title="突破网络边界：2023年仍可稳定使用的科学上网工具全解析">突破网络边界：2023年仍可稳定使用的科学上网工具全解析</a></li>
                         <li class="py-2"><a href="/news/article-149267.htm" title="V2Ray iOS完全指南：从零开始构建你的隐私防护网">V2Ray iOS完全指南：从零开始构建你的隐私防护网</a></li>
+                        <li class="py-2"><a href="/news/article-153884.htm" title="Shadowrocket终极使用指南：从基础配置到高阶技巧全解析">Shadowrocket终极使用指南：从基础配置到高阶技巧全解析</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-21-clash-stash-node.htm" title="VPN分享 | 9月21日20.8M/S|免费SSR/Clash节点/Shadowrocket节点/V2ray节点推荐，在线Clash机场梯子购买推荐">VPN分享 | 9月21日20.8M/S|免费SSR/Clash节点/Shadowrocket节点/V2ray节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-23-clash-stash-node.htm" title="VPN分享 | 9月23日21.7M/S|免费SSR/V2ray节点/Shadowrocket节点/Clash节点推荐，在线Clash机场梯子购买推荐">VPN分享 | 9月23日21.7M/S|免费SSR/V2ray节点/Shadowrocket节点/Clash节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-152063.htm" title="小米科学上网插件完全指南：从入门到精通的设置全解析">小米科学上网插件完全指南：从入门到精通的设置全解析</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-16-clash-verge-rev-github.htm" title="VPN分享 | 9月16日22.1M/S|免费SSR/Shadowrocket节点/Clash节点/V2ray节点推荐，在线Clash机场梯子购买推荐">VPN分享 | 9月16日22.1M/S|免费SSR/Shadowrocket节点/Clash节点/V2ray节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-150264.htm" title="突破数字边界：手机科学上网全攻略与安全指南">突破数字边界：手机科学上网全攻略与安全指南</a></li>
+                        <li class="py-2"><a href="/news/article-154983.htm" title="突破网络枷锁：v2rayng应对局域网封锁与大陆失效的终极指南">突破网络枷锁：v2rayng应对局域网封锁与大陆失效的终极指南</a></li>
                     </ul>
     </div>
 </div>
@@ -160,7 +166,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">5</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
@@ -180,8 +186,10 @@
         <div class="container">
             <div class="below-section text-center">
                 <p class="copy-text">
-                                        <p>
+                                        <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
                                                 <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
                                                 <a href="/paid-subscribe/">推荐机场</a> |
                                                 <a href="/news/">新闻资讯</a> |
                                                 <a href="/client.htm">客户端</a> |
@@ -190,7 +198,7 @@
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                    <a href="/">VPN分享 订阅中文网</a> 版权所有 Powered by WordPress
+                                        <a href="/">VPN分享 订阅中文网</a> 版权所有 Powered by WordPress
                 </p>
             </div>
         </div>
