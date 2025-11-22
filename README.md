@@ -1,4 +1,4 @@
-# VPN分享 | 11月14日20.3M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，在线Clash机场梯子购买推荐  更新时间 2025-11-14 00:32:29
+# VPN分享 | 11月22日20.7M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐  更新时间 2025-11-22 08:53:15
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpnfenxiang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://vpnfenxiang.github.io/uploads/2025/11/0-20251114.yaml
-- https://vpnfenxiang.github.io/uploads/2025/11/1-20251114.yaml
-- https://vpnfenxiang.github.io/uploads/2025/11/2-20251114.yaml
-- https://vpnfenxiang.github.io/uploads/2025/11/3-20251114.yaml
-- https://vpnfenxiang.github.io/uploads/2025/11/4-20251114.yaml
+- https://vpnfenxiang.github.io/uploads/2025/11/0-20251122.yaml
+- https://vpnfenxiang.github.io/uploads/2025/11/1-20251122.yaml
+- https://vpnfenxiang.github.io/uploads/2025/11/2-20251122.yaml
+- https://vpnfenxiang.github.io/uploads/2025/11/3-20251122.yaml
+- https://vpnfenxiang.github.io/uploads/2025/11/4-20251122.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://vpnfenxiang.github.io/uploads/2025/11/0-20251114.txt
-- https://vpnfenxiang.github.io/uploads/2025/11/1-20251114.txt
-- https://vpnfenxiang.github.io/uploads/2025/11/2-20251114.txt
-- https://vpnfenxiang.github.io/uploads/2025/11/3-20251114.txt
-- https://vpnfenxiang.github.io/uploads/2025/11/4-20251114.txt
+- https://vpnfenxiang.github.io/uploads/2025/11/0-20251122.txt
+- https://vpnfenxiang.github.io/uploads/2025/11/1-20251122.txt
+- https://vpnfenxiang.github.io/uploads/2025/11/2-20251122.txt
+- https://vpnfenxiang.github.io/uploads/2025/11/3-20251122.txt
+- https://vpnfenxiang.github.io/uploads/2025/11/4-20251122.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://vpnfenxiang.github.io/uploads/2025/11/20251114.json
+- https://vpnfenxiang.github.io/uploads/2025/11/20251122.json
 
 ## 更多Clash节点订阅 ：
 
